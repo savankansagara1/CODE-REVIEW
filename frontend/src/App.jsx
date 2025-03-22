@@ -20,7 +20,7 @@ function App() {
 
   async function reviewCode() {
     try {
-      const response = await axios.post('http://localhost:8080/ai/get-review', { code });
+      const response = await axios.post('https://code-review-w7lr.onrender.com/ai/get-review', { code });
 
       // Debugging: Check what response.data is
       console.log("API Response:", response.data);
