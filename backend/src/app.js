@@ -4,8 +4,14 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
-app.use(express.json()); // ✅ Added this middleware
+// ✅ Allow all origins (Universal CORS)
+app.use(cors({
+  origin: "*",  // Allows requests from any domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
+app.use(express.json()); // ✅ Parse JSON body
 
 app.get("/", (req, res) => {
   res.send("Hello Savan!");
