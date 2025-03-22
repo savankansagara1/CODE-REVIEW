@@ -62,7 +62,7 @@ code-review-ai/
 
 ### Prerequisites
 - **Node.js** installed
-- **npm** or **yarn**
+- **npm** 
 
 ### Backend Setup
 ```sh
